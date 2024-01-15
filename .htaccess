@@ -1,0 +1,5 @@
+php_value date.timezone 'country/state'
+
+ErrorDocument 403 <base-url>/template/error_pages?code=403
+ErrorDocument 404 <base-url>/template/error_pages?code=404
+ErrorDocument 500 <base-url>/template/error_pages?code=500
