@@ -21,6 +21,10 @@
 		return $name ? $_ENV[$name] : $_ENV;
 	}
 	
+	function get_files($name = null) {
+		return $name ? $_FILES[$name] : $_FILES;
+	}
+	
 	function get_files_error($name) {
 		return $_FILES[$name]['error'];
 	}
@@ -39,10 +43,6 @@
 	
 	function get_files_type($name) {
 		return $_FILES[$name]['type'];
-	}
-	
-	function get_files($name = null) {
-		return $name ? $_FILES[$name] : $_FILES;
 	}
 	
 	function get_get($name = null) {
@@ -68,6 +68,47 @@
 	
 	function get_session($name = null) {
 		return $name ? $_SESSION[$name] : $_SESSION;
+	}
+	
+	function has_array($array, $name) {
+		return isset($array[$name]);
+	}
+	
+	function has_cookie($name) {
+		return isset($_COOKIE[$name]);
+	}
+	
+	function has_env($name) {
+		return isset($_ENV[$name]);
+	}
+	
+	function has_files($name) {
+		return isset($_FILES[$name]);
+	}
+	
+	function has_get($name) {
+		return isset($_GET[$name]);
+	}
+	
+	function has_globals($name) {
+		return isset($GLOBALS
+[$name]);
+	}
+	
+	function has_post($name) {
+		return isset($_POST[$name]);
+	}
+	
+	function has_request($name) {
+		return isset($_REQUEST[$name]);
+	}
+	
+	function has_server($name) {
+		return isset($_SERVER[$name]);
+	}
+	
+	function has_session($name) {
+		return isset($_SESSION[$name]);
 	}
 	
 	function redirect($location) {
